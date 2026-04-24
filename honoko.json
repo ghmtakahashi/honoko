@@ -1,0 +1,62 @@
+{
+  "ungrouped": [
+    {
+      "name": "Deploy5",
+      "shell": "./deploy.sh",
+      "description": "Run deploy",
+      "confirm": true
+    }
+  ],
+  "groups": {
+    "ops": [
+      {
+        "name": "Deploy",
+        "shell": "./deploy.sh",
+        "description": "Run deploy",
+        "confirm": true
+      },
+      {
+        "name": "Deploy2",
+        "shell": "./deploy.sh\necho deployed",
+        "description": "Run deploy",
+        "confirm": true
+      }
+    ],
+    "rust": [
+      {
+        "name": "Build",
+        "executable": "cargo",
+        "args": [
+          "build"
+        ],
+        "description": "Compile the current project"
+      },
+      {
+        "name": "Release",
+        "executable": "cargo",
+        "args": [
+          "build",
+          "--release"
+        ],
+        "description": "Compile the current project"
+      },
+      {
+        "name": "Test",
+        "executable": "cargo",
+        "args": [
+          "test"
+        ],
+        "description": "Run the Rust test suite"
+      },
+      {
+        "name": "Clean",
+        "executable": "cargo",
+        "args": [
+          "clean"
+        ],
+        "description": "Remove build artifacts",
+        "confirm": true
+      }
+    ]
+  }
+}
